@@ -39,16 +39,16 @@
                         data: JSON.stringify({
                             firstName: firstName,
                             lastName: lastName,
-                            email: newEmail,
-                            phone: phone
+							oldEmail: oldEmail,
+                            newEmail: newEmail,
                         }),
                         contentType: "application/json; charset=utf-8",
                         dataType: "json",
                         success: function(data) {
                             $("#firstName").val("");
                             $("#lastName").val("");
-                            $("#email").val("");
-                            $("#phone").val("");
+                            $("#old-email").val("");
+                            $("#new-email").val("");
                             $("#messageMessage").text("Record updated!");
                             $("#message").show();
                         },
@@ -106,7 +106,7 @@
                         <span class="sr-only">Error:</span>
                         <span id="errorMessage"></span>
                     </div>
-                    <button type="submit" class="btn btn-primary">Update Phone Number</button>
+                    <button type="submit" class="btn btn-primary">Update Email Address</button>
                 </div>
             </div>
         </form>
